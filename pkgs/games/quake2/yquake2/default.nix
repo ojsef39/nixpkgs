@@ -32,14 +32,14 @@ let
       ;
   };
 
-  yquake2 = stdenv.mkDerivation rec {
+  yquake2 = stdenv.mkDerivation (finalAttrs: {
     pname = "yquake2";
     version = "8.50";
 
     src = fetchFromGitHub {
       owner = "yquake2";
       repo = "yquake2";
-      rev = "QUAKE2_${builtins.replaceStrings [ "." ] [ "_" ] version}";
+      rev = "QUAKE2_${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
       sha256 = "sha256-PR/Xw/u5auGFrrXnRsl2bAkOt8/JZWY3uGNfTHomAj8=";
     };
 
@@ -109,7 +109,7 @@ let
       platforms = platforms.unix;
       maintainers = with maintainers; [ tadfisher ];
     };
-  };
+  });
 
 in
 {

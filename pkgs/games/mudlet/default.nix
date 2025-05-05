@@ -56,14 +56,14 @@ let
     ]
   );
 in
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "mudlet";
   version = "4.17.2";
 
   src = fetchFromGitHub {
     owner = "Mudlet";
     repo = "Mudlet";
-    rev = "Mudlet-${version}";
+    tag = "Mudlet-${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-K75frptePKfHeGQNXaX4lKsLwO6Rs6AAka6hvP8MA+k=";
   };
@@ -180,4 +180,4 @@ stdenv.mkDerivation rec {
     license = licenses.gpl2Plus;
     mainProgram = "mudlet";
   };
-}
+})
