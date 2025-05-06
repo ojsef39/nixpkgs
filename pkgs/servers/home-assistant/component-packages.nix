@@ -4778,7 +4778,8 @@
       ];
     "rehlko" =
       ps: with ps; [
-      ]; # missing inputs: aiokem
+        aiokem
+      ];
     "rejseplanen" =
       ps: with ps; [
         rjpl
@@ -7352,6 +7353,7 @@
     "recovery_mode"
     "reddit"
     "refoss"
+    "rehlko"
     "remote"
     "remote_calendar"
     "renault"
