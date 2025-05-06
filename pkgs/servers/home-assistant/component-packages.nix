@@ -1507,7 +1507,8 @@
       ];
     "ephember" =
       ps: with ps; [
-      ]; # missing inputs: pyephember2
+        pyephember2
+      ];
     "epic_games_store" =
       ps: with ps; [
         epicstore-api
