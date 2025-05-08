@@ -2098,7 +2098,8 @@
       ];
     "google_travel_time" =
       ps: with ps; [
-      ]; # missing inputs: google-maps-routing
+        google-maps-routing
+      ];
     "google_wifi" =
       ps: with ps; [
       ];
@@ -6997,6 +6998,7 @@
     "google_sheets"
     "google_tasks"
     "google_translate"
+    "google_travel_time"
     "google_wifi"
     "govee_ble"
     "govee_light_local"
