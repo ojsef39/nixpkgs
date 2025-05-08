@@ -7651,7 +7651,7 @@ with pkgs;
     buildDocs = false;
   };
 
-  sbomnix = python3.pkgs.callPackage ../tools/security/sbomnix { };
+  sbomnix = callPackage ../tools/security/sbomnix { };
 
   seer = libsForQt5.callPackage ../development/tools/misc/seer { };
 
