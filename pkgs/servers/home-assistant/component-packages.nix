@@ -3463,7 +3463,8 @@
       ];
     "melcloud" =
       ps: with ps; [
-      ]; # missing inputs: python-melcloud
+        python-melcloud
+      ];
     "melissa" =
       ps: with ps; [
       ]; # missing inputs: py-melissa-climate
@@ -7172,6 +7173,7 @@
     "media_extractor"
     "media_player"
     "media_source"
+    "melcloud"
     "melnor"
     "meraki"
     "met"
