@@ -2,6 +2,7 @@
   lib,
   stdenv,
   aiohttp,
+  aiomqtt,
   aioresponses,
   async-timeout,
   buildPythonPackage,
@@ -14,6 +15,7 @@
   poetry-core,
   pycryptodome,
   pycryptodomex,
+  pyrate-limiter,
   pytest-asyncio,
   pytestCheckHook,
   pythonOlder,
@@ -45,12 +47,14 @@ buildPythonPackage rec {
 
   dependencies = [
     aiohttp
+    aiomqtt
     async-timeout
     click
     construct
     dacite
     paho-mqtt
     pycryptodome
+    pyrate-limiter
     vacuum-map-parser-roborock
   ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ pycryptodomex ];
 
