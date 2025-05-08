@@ -13,6 +13,7 @@
   pythonOlder,
   pytest-asyncio,
   pytestCheckHook,
+  syrupy,
   tabulate,
   typeguard,
 }:
@@ -52,6 +53,7 @@ buildPythonPackage rec {
     aioresponses
     pytest-asyncio
     pytestCheckHook
+    syrupy
     typeguard
   ] ++ lib.flatten (lib.attrValues optional-dependencies);
 
