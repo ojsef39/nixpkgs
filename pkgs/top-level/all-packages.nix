@@ -7651,8 +7651,6 @@ with pkgs;
     buildDocs = false;
   };
 
-  sbomnix = callPackage ../tools/security/sbomnix { };
-
   seer = libsForQt5.callPackage ../development/tools/misc/seer { };
 
   semantik = libsForQt5.callPackage ../applications/office/semantik { };
