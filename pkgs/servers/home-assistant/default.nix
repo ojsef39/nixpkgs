@@ -3,6 +3,7 @@
   lib,
   callPackage,
   fetchFromGitHub,
+  fetchpatch,
   fetchPypi,
   python313,
   replaceVars,
@@ -410,6 +411,12 @@ python.pkgs.buildPythonApplication rec {
 
   # leave this in, so users don't have to constantly update their downstream patch handling
   patches = [
+    (fetchpatch {
+      name = "fix-point-import-error.patch";
+      url = "https://github.com/home-assistant/core/commit/3c4c3dc08e306b75dce486f5f5236a731fd04cf4.patch";
+      hash = "sha256-ke04kJWuBHMANVZo75QL5QwU51DZtO4FBBNu4Szu9q8=";
+    })
+
     # Follow symlinks in /var/lib/hass/www
     ./patches/static-follow-symlinks.patch
 
